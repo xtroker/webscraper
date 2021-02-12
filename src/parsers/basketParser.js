@@ -1,11 +1,12 @@
 const $ = require("cheerio");
 
-export const eventParserBasket = (fragmento) => {
+const eventParserBasket = (fragmento) => {
   let id = $(fragmento)[0].attribs.id;
   let hora = $(
     "table > thead > tr > th:nth-child(1) > span:nth-child(1)",
     fragmento
   )[0].attribs["data-value"];
+  
   let equipo1 = $(
     "table > tbody > tr:nth-child(1) > td:nth-child(1) > div > span.team-nameplate > span.team-name > a > span",
     fragmento
@@ -56,3 +57,5 @@ export const eventParserBasket = (fragmento) => {
     isPlayingNow,
   };
 };
+
+module.exports = eventParserBasket;

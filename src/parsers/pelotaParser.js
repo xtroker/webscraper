@@ -1,5 +1,7 @@
 const $ = require("cheerio");
 
-export const eventParserPelota = (fragmento) => {
-    return "Not implemented yet";
-  };
+const eventParserPelota = (fragmento) => {
+  return "Not implemented yet";
+};
+
+module.exports = eventParserPelota;
